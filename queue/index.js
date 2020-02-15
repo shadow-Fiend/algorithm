@@ -68,7 +68,7 @@ function Queue() {
         let str = ''
 
         this.list.map(o => {
-            str += o + ''
+            str += o + ' '
         })
 
         return str
