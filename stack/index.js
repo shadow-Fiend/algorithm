@@ -1,3 +1,29 @@
+// example 十进制转二进制 ( 正数 )
+function decToBin(num) {
+    if(typeof num !== 'number') return
+
+    // 定义栈对象
+    let stack = new Stack()
+
+    // 循环操作
+    while(num > 0) {
+        stack.push(num % 2)
+
+        num = Math.floor(num / 2)
+    }
+
+    // 从栈中取出元素
+    let result = ''
+    while(!stack.isEmpty()) {
+        result += stack.pop()
+    }
+    return result
+}
+
+console.log(decToBin(100)) // 1100100
+
+
+// 基于数组实现
 function Stack() {
     this.list = []
 
@@ -37,27 +63,3 @@ function Stack() {
         return str
 	}
 }
-
-// example 十进制转二进制 ( 正数 )
-function decToBin(num) {
-    if(typeof num !== 'number') return
-
-    // 定义栈对象
-    let stack = new Stack()
-
-    // 循环操作
-    while(num > 0) {
-        stack.push(num % 2)
-
-        num = Math.floor(num / 2)
-    }
-
-    // 从栈中取出元素
-    let result = ''
-    while(!stack.isEmpty()) {
-        result += stack.pop()
-    }
-    return result
-}
-
-console.log(decToBin(100)) // 1100100
