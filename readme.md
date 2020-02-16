@@ -12,3 +12,6 @@ priority_queue/index.js
 
 # LinkedList 单向链表
 linked_list/index.js
+
+# DoublyLinkedList 双向链表
+doubly_linked_list/index.js

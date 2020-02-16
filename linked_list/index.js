@@ -130,8 +130,6 @@ function LinkedList() {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return false
 
-        if(!this.length) return true
-
         let cur = this.head
         
         if(position === 0) {
@@ -147,7 +145,7 @@ function LinkedList() {
             pre.next = cur.next
         }
 
-        length--
+        this.length--
         return true
 
     }
