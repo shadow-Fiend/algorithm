@@ -1,7 +1,18 @@
+
+let priorityQueue = new PriorityQueue() 
+
+priorityQueue.enqueue('apple', 100)
+priorityQueue.enqueue('banana', 50)
+priorityQueue.enqueue('egg', 300)
+priorityQueue.enqueue('potato', 20)
+
+console.log(priorityQueue.toString())
+
 // 基于数组的实现
 function PriorityQueue() {
     this.list = []
 
+    // 内部节点类
     function Queue(element, priority) {
         this.element = element
         this.priority = priority
@@ -58,12 +69,3 @@ function PriorityQueue() {
         return str
     }
 }
-
-let priorityQueue = new PriorityQueue() 
-
-priorityQueue.enqueue('apple', 100)
-priorityQueue.enqueue('banana', 50)
-priorityQueue.enqueue('egg', 300)
-priorityQueue.enqueue('potato', 20)
-
-console.log(priorityQueue.toString())

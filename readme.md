@@ -9,3 +9,6 @@ queue/index.js
 
 # PriorityQueue 优先级队列
 priority_queue/index.js
+
+# LinkedList 单向链表
+linked_list/index.js
