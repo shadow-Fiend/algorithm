@@ -31,7 +31,7 @@ function LinkedList() {
     this.length = 0
 
     // 尾部添加元素
-    LinkedList.prototype.append = (element) => {
+    LinkedList.prototype.append = function(element) {
         let node = new Node(element)
 
         if(this.length === 0) {
@@ -50,7 +50,7 @@ function LinkedList() {
     }
 
     // 特定位置插入元素
-    LinkedList.prototype.insert = (element, position) => {
+    LinkedList.prototype.insert = function(element, position) {
         // 超出边界值的判断
         if(position < 0 || position > this.length) return false
 
@@ -78,7 +78,7 @@ function LinkedList() {
     }
 
     // 获取对应位置的元素
-    LinkedList.prototype.get = (position) => {
+    LinkedList.prototype.get = function(position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return null
 
@@ -93,7 +93,7 @@ function LinkedList() {
     }
 
     // 返回在链表中的索引值，如果没有则返回 -1
-    LinkedList.prototype.indexOf = (element) => {
+    LinkedList.prototype.indexOf = function(element) {
         let num = -1
         let cur = this.head
         
@@ -109,7 +109,7 @@ function LinkedList() {
     }
 
     // 更新对应位置的元素
-    LinkedList.prototype.update = (element, position) => {
+    LinkedList.prototype.update = function(element, position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return false
 
@@ -126,7 +126,7 @@ function LinkedList() {
     }
 
     // 移除对应位置的元素
-    LinkedList.prototype.removeAt = (position) => {
+    LinkedList.prototype.removeAt = function(position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return false
 
@@ -151,24 +151,24 @@ function LinkedList() {
     }
 
     // 移除元素
-    LinkedList.prototype.remove = (element) => {
+    LinkedList.prototype.remove = function(element) {
         let position = this.indexOf(element)
 
         return this.removeAt(position)
     }
 
     // 是否为空
-    LinkedList.prototype.isEmpty = () => {
+    LinkedList.prototype.isEmpty = function() {
         return this.length === 0
     }
 
     // 元素的个数
-    LinkedList.prototype.size = () => {
+    LinkedList.prototype.size = function() {
         return this.length
     }
 
     // toString 方法
-    LinkedList.prototype.toString = () => {
+    LinkedList.prototype.toString = function() {
         if(!this.length) return ''
 
         let cur = this.head

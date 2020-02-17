@@ -28,32 +28,32 @@ function Stack() {
     this.list = []
 
     // 插入元素
-    Stack.prototype.push = (item) => {
+    Stack.prototype.push = function(item) {
         this.list.push(item)
     }
 
     // 取出元素
-    Stack.prototype.pop = () => {
+    Stack.prototype.pop = function() {
         return this.list.pop()
     }
 
     // 查看栈顶元素
-    Stack.prototype.peek = () => {
+    Stack.prototype.peek = function() {
         return this.list[this.list.length - 1]
     }
 
     // 判断栈是否为空
-    Stack.prototype.isEmpty = () => {
+    Stack.prototype.isEmpty = function() {
         return this.list.length === 0
     }
 
     // 获取栈中元素的个数
-    Stack.prototype.size = () => {
+    Stack.prototype.size = function() {
         return this.list.length
     }
 
     // toString 方法
-    Stack.prototype.toString = () => {
+    Stack.prototype.toString = function() {
         let str = ''
 
         this.list.map(o => {

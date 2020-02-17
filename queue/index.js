@@ -39,32 +39,32 @@ function Queue() {
     this.list = []
 
     // 插入元素
-    Queue.prototype.enqueue = (item) => {
+    Queue.prototype.enqueue = function(item) {
         this.list.push(item)
     }
 
     // 取出元素
-    Queue.prototype.dequeue = () => {
+    Queue.prototype.dequeue = function() {
         return this.list.shift()
     }
 
     // 查看队列前端元素
-    Queue.prototype.front = () => {
+    Queue.prototype.front = function() {
         return this.list[0]
     }
 
     // 判断队列是否为空
-    Queue.prototype.isEmpty = () => {
+    Queue.prototype.isEmpty = function() {
         return this.list.length === 0
     }
 
     // 获取队列中元素的个数
-    Queue.prototype.size = () => {
+    Queue.prototype.size = function() {
         return this.list.length
     }
 
     // toString 方法
-    Queue.prototype.toString = () => {
+    Queue.prototype.toString = function() {
         let str = ''
 
         this.list.map(o => {

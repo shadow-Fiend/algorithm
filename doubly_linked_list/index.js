@@ -36,7 +36,7 @@ function DoublyLinkedList() {
     this.length = 0
 
     // 尾部添加元素
-    DoublyLinkedList.prototype.append = (element) => {
+    DoublyLinkedList.prototype.append = function(element) {
         let node = new Node(element)
 
         if(this.length === 0) {
@@ -52,7 +52,7 @@ function DoublyLinkedList() {
     }
 
     // 特定位置插入元素
-    DoublyLinkedList.prototype.insert = (element, position) => {
+    DoublyLinkedList.prototype.insert = function(element, position) {
         // 超出边界值的判断
         if(position < 0 || position > this.length) return false
 
@@ -92,7 +92,7 @@ function DoublyLinkedList() {
     }
 
     // 获取对应位置的元素
-    DoublyLinkedList.prototype.get = (position) => {
+    DoublyLinkedList.prototype.get = function(position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return null
 
@@ -119,7 +119,7 @@ function DoublyLinkedList() {
     }
 
     // 返回在链表中的索引值，如果没有则返回 -1
-    DoublyLinkedList.prototype.indexOf = (element) => {
+    DoublyLinkedList.prototype.indexOf = function(element) {
         let num = -1
         let cur = this.head
         
@@ -135,7 +135,7 @@ function DoublyLinkedList() {
     }
 
     // 更新对应位置的元素
-    DoublyLinkedList.prototype.update = (element, position) => {
+    DoublyLinkedList.prototype.update = function(element, position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return false
 
@@ -164,7 +164,7 @@ function DoublyLinkedList() {
     }
 
     // 移除对应位置的元素
-    DoublyLinkedList.prototype.removeAt = (position) => {
+    DoublyLinkedList.prototype.removeAt = function(position) {
         // 超出边界值的判断
         if(position < 0 || position >= this.length) return false
 
@@ -215,29 +215,29 @@ function DoublyLinkedList() {
     }
 
     // 移除元素
-    DoublyLinkedList.prototype.remove = (element) => {
+    DoublyLinkedList.prototype.remove = function(element) {
         let position = this.indexOf(element)
 
         return this.removeAt(position)
     }
 
     // 是否为空
-    DoublyLinkedList.prototype.isEmpty = () => {
+    DoublyLinkedList.prototype.isEmpty = function() {
         return this.length === 0
     }
 
     // 元素的个数
-    DoublyLinkedList.prototype.size = () => {
+    DoublyLinkedList.prototype.size = function() {
         return this.length
     }
 
     // toString 方法
-    DoublyLinkedList.prototype.toString = () => {
+    DoublyLinkedList.prototype.toString = function() {
         return this.backwardString()
     }
 
     // backwardString 方法 - 向前遍历的字符串形式
-    DoublyLinkedList.prototype.forwardString = () => {
+    DoublyLinkedList.prototype.forwardString = function() {
         if(!this.length) return ''
 
         let cur = this.tail
@@ -252,7 +252,7 @@ function DoublyLinkedList() {
     }
 
     // forwardString 方法 - 向后遍历的字符串形式
-    DoublyLinkedList.prototype.backwardString = () => {
+    DoublyLinkedList.prototype.backwardString = function() {
         if(!this.length) return ''
 
         let cur = this.head

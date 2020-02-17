@@ -19,7 +19,7 @@ function PriorityQueue() {
     }
 
     // 插入元素
-    PriorityQueue.prototype.enqueue = (element, priority) => {
+    PriorityQueue.prototype.enqueue = function(element, priority) {
         let queue = new Queue(element, priority)
 
         if(this.list.length === 0) {
@@ -39,27 +39,27 @@ function PriorityQueue() {
     }
 
     // 取出元素
-    PriorityQueue.prototype.dequeue = () => {
+    PriorityQueue.prototype.dequeue = function() {
         return this.list.shift()
     }
 
     // 查看队列前端元素
-    PriorityQueue.prototype.front = () => {
+    PriorityQueue.prototype.front = function() {
         return this.list[0]
     }
 
     // 判断队列是否为空
-    PriorityQueue.prototype.isEmpty = () => {
+    PriorityQueue.prototype.isEmpty = function() {
         return this.list.length === 0
     }
 
     // 获取队列中元素的个数
-    PriorityQueue.prototype.size = () => {
+    PriorityQueue.prototype.size = function() {
         return this.list.length
     }
 
     // toString 方法
-    PriorityQueue.prototype.toString = () => {
+    PriorityQueue.prototype.toString = function() {
         let str = ''
 
         this.list.map(o => {
