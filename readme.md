@@ -24,3 +24,7 @@ doubly_linked_list/index.js
 # Set 集合类 并集 交集 差集 子集
 - 对比数组 无序 不可重复
 set/index.js
+
+# hash 哈希表 哈希函数 质数
+- 对比数组 插入删除和查找都很快 但是数据是没有顺序的 key 不允许重复
+hash/index.js
